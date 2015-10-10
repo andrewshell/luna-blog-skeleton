@@ -18,6 +18,7 @@ $yaml = new Symfony\Component\Yaml\Parser();
 
 // Parsers
 $archiveTwigParser = new Luna\Parser\Twig($twig, 'archive.twig.html');
+$excerptTwigParser = new Luna\Parser\Twig($twig, 'excerpt.twig.html');
 $postTwigParser = new Luna\Parser\Twig($twig, 'post.twig.html');
 $layoutTwigParser = new Luna\Parser\Twig($twig, 'layout.twig.html');
 $markdownParser = new Luna\Parser\Markdown($parsedown);
@@ -34,7 +35,11 @@ $pageSource->exclude('/_templates/');
 $blogArchiveRenderer = new Luna\Renderer\BlogArchive($blogSource);
 $blogArchiveRenderer->addParser($yamlFrontMatterParser);
 $blogArchiveRenderer->addParser($markdownParser);
-$blogArchiveRenderer->addParser($archiveTwigParser);
+$blogArchiveRenderer->addParser($excerptTwigParser);
+
+$blogArchiveWrapper = new Luna\Renderer\Aggregate();
+$blogArchiveWrapper->addRenderer($blogArchiveRenderer);
+$blogArchiveWrapper->addParser($archiveTwigParser);
 
 $blogPostRenderer = new Luna\Renderer\BlogPost($blogSource);
 $blogPostRenderer->addParser($yamlFrontMatterParser);
@@ -48,7 +53,7 @@ $pageRenderer->addParser($layoutTwigParser);
 
 
 $aggregateRenderer = new Luna\Renderer\Aggregate();
-$aggregateRenderer->addRenderer($blogArchiveRenderer);
+$aggregateRenderer->addRenderer($blogArchiveWrapper);
 $aggregateRenderer->addRenderer($blogPostRenderer);
 $aggregateRenderer->addRenderer($pageRenderer);
 

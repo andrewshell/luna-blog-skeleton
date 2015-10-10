@@ -1,0 +1,3 @@
+<h2><a href="{{ meta.path }}">{{ meta.title }}</a></h2>
+<p>{{ meta.date | date("m/d/Y") }}</p>
+<p>{{ content | striptags | truncate(140) }}</p>
