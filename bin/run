@@ -1,0 +1,3 @@
+#!/bin/bash
+MY_PATH=`dirname "$0"`
+php -S "localhost:${1:-3000}" -t "$MY_PATH/../web" "$MY_PATH/../web/index.php"

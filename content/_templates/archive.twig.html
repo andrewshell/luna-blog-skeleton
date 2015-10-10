@@ -1,0 +1,9 @@
+{% extends "layout.twig.html" %}
+
+{% block content %}
+    {% for page in meta.pages %}
+    <h2><a href="{{ page.meta.path }}">{{ page.meta.title }}</a></h2>
+    <p>{{ page.meta.date | date("m/d/Y") }}</p>
+    <p>{{ page.content | striptags | truncate(140) }}</p>
+    {% endfor %}
+{% endblock %}

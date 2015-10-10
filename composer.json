@@ -1,0 +1,27 @@
+{
+    "name": "andrewshell/luna-blog-skeleton",
+    "description": "A skeleton for a Luna based blog",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Shell",
+            "email": "andrew@andrewshell.org"
+        }
+    ],
+    "require": {
+        "andrewshell/luna": "*@dev",
+        "twig/extensions": "^1.3"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/andrewshell/luna.git"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
