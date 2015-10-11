@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "andrewshell/luna": "*@dev",
+        "andrewshell/luna": "0.1.0",
         "twig/extensions": "^1.3"
     },
     "repositories": [
