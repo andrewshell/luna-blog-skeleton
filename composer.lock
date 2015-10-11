@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andrewshell/luna.git",
-                "reference": "8afa9848337ee9eb79c74efedf36a8a3b9f5b9fa"
+                "reference": "ddeedf07e5fdc8d1075d5d56b7a236d22b5080ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andrewshell/luna/zipball/8afa9848337ee9eb79c74efedf36a8a3b9f5b9fa",
-                "reference": "8afa9848337ee9eb79c74efedf36a8a3b9f5b9fa",
+                "url": "https://api.github.com/repos/andrewshell/luna/zipball/ddeedf07e5fdc8d1075d5d56b7a236d22b5080ce",
+                "reference": "ddeedf07e5fdc8d1075d5d56b7a236d22b5080ce",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "source": "https://github.com/andrewshell/luna/tree/master",
                 "issues": "https://github.com/andrewshell/luna/issues"
             },
-            "time": "2015-10-10 14:55:16"
+            "time": "2015-10-11 21:55:28"
         },
         {
             "name": "erusev/parsedown",
